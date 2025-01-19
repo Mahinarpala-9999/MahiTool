@@ -37,7 +37,7 @@ Ensure the following dependencies are installed before running the project:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/mahi-tool.git
+   git clone https://github.com/Mahinarpala-9999/mahi-tool.git
    cd mahi-tool
    ```
 

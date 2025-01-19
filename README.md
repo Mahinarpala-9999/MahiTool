@@ -57,9 +57,48 @@ Ensure the following dependencies are installed before running the project:
 
 ## Usage
 
-1. Launch the Electron app.
-2. Use the graphical interface to send commands to the Kali Linux system.
-3. View results directly in the app or through your terminal.
+1. **Launch the Electron App**: Once the app is launched, it will communicate with the backend running on Kali Linux.
+2. **Execute Remote Commands**: You can send commands from Firebase to execute on the Kali Linux system. The app can run commands like `device info`, `take screenshot`, `upload media files`, etc.
+3. **Upload Media Files**: The app supports uploading various types of media to a server for storage and further analysis.
+4. **System Information**: The app can gather device information (like OS version, hardware specs, etc.) and upload it to Firebase or a specified server.
+5. **Proxy Functionality**: The app will route the device's internet traffic through a proxy server, masking the real IP address for anonymity.
+
+### Example Commands
+
+- **Device Info**: Retrieve and upload system information to Firebase:
+  ```bash
+  firebase.database().ref('commands/device_info').set({
+      status: 'run',
+      action: 'get_device_info'
+  });
+  ```
+
+- **Take Screenshot**: Capture and upload a screenshot to the server:
+  ```bash
+  firebase.database().ref('commands/take_screenshot').set({
+      status: 'run',
+      action: 'capture_screenshot'
+  });
+  ```
+
+- **Upload Media**: Upload an image file to the server:
+  ```bash
+  firebase.database().ref('commands/upload_media').set({
+      status: 'run',
+      action: 'upload_image',
+      file: 'image_path'
+  });
+  ```
+
+## Proxy Implementation
+
+This project includes functionality for IP masking by using a proxy server. The app connects to a proxy server and routes its internet traffic, ensuring that the real IP address is hidden.
+
+### Steps for Proxy Setup
+
+1. **Login to the server**: The proxy server is controlled by the login credentials.
+2. **Execute Proxy Change**: When the Expo app connects to the server, it uses the proxy IP from the `login.txt` file stored on the server.
+
 
 ## Screenshot
 1. ![image](https://github.com/user-attachments/assets/f872c474-2ae7-4cf6-aa6b-5854897af1dc)
@@ -69,7 +108,9 @@ Ensure the following dependencies are installed before running the project:
 5. ![image](https://github.com/user-attachments/assets/cf38ac1c-430f-462e-a4d7-07646f3e8089)
 
 
+## Disclaimer
 
+This tool is intended for educational and ethical hacking purposes only. It should only be used in environments where explicit permission has been granted. Unauthorized use of this tool could be illegal and unethical. Always ensure you have permission before using this tool on any system.
 
 
 

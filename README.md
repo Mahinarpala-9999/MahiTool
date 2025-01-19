@@ -62,3 +62,14 @@ Ensure the following dependencies are installed before running the project:
 3. View results directly in the app or through your terminal.
 
 ## Screenshot
+1. ![image](https://github.com/user-attachments/assets/f872c474-2ae7-4cf6-aa6b-5854897af1dc)
+2. ![image](https://github.com/user-attachments/assets/757243ea-20ac-4846-9a00-f1cd7ab241ee)
+3. ![image](https://github.com/user-attachments/assets/42d5cb50-52fb-4cb8-9070-7e105cc8d836)
+4. ![image](https://github.com/user-attachments/assets/d955a3c5-79e9-41c4-9d0e-25a96f12f301)
+5. ![image](https://github.com/user-attachments/assets/cf38ac1c-430f-462e-a4d7-07646f3e8089)
+
+
+
+
+
+
